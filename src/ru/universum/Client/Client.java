@@ -1,14 +1,13 @@
 package ru.universum.Client;
 
 
-import javafx.scene.control.*;
 import ru.universum.Client.controllers.LoginController;
+import ru.universum.Client.controllers.Controller;
+import ru.universum.Client.controllers.RegisterController;
 //import ru.universum.Loader.Account;
 //import ru.universum.Loader.Friend;
 //import ru.universum.Loader.Message;
 
-import java.awt.*;
-import java.io.Console;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -43,6 +42,7 @@ public class Client {
     private static boolean statusRegistered = false;
 
     static LoginController LoginController = new LoginController();
+    static RegisterController RegisterController = new RegisterController();
     static ArrayList<Account> usersInSearch = new ArrayList<>();//есть только id и login
     static Map<Integer , Dialog> dialogs = new HashMap<>();
     public static ArrayList<Account> getUsersInSearch(){
@@ -98,9 +98,9 @@ public class Client {
         try {TimeUnit.MILLISECONDS.sleep(500);} catch (InterruptedException ignored) {}
         if (statusRegistered){
             login(login, password);
-//            Frames.RegisterFrame.dispose();
+            Controller.hideRegister();
         } else {
-//            Frames.RegisterFrame.setInfo("Ошибка регистрации", Color.RED);
+            RegisterController.getLabelInfo().setText("Ошибка регистрации");
         }
     }
 
@@ -149,21 +149,21 @@ public class Client {
             case "logged" :
                 if(command[2].equals("true")){
                     statusLogged = true;
-//                    Frames.LoginFrame.dispose();
+                    Controller.hideLogin();
                     //залогинился
                 }else{
-//                    Frames.LoginFrame.setInfo("Неверные логин или пароль", Color.RED);
+                    LoginController.getLabelInfo().setText("Не верные логин или пароль!");
                 }
                 break;
 
             //ну тут понятно
             case "connection" :
-//                Frames.LoginFrame.setInfo("Соединение потеряно!", Color.RED);
-//                Frames.RegisterFrame.setInfo("Соединение потеряно!", Color.RED);
+                LoginController.getLabelInfo().setText("Соединение потеряно!");
+                RegisterController.getLabelInfo().setText("Соединение потеряно!");
 //                Frames.MainFrame.setInfo("Соединение потеряно!", Color.RED);
                 statusLogged = false;
                 statusConnected = true;
-//                console.log("Connection refused", "err");
+                System.out.println("[ERROR]: Connection refused");
                 try {
                     socket.close();
                 } catch (IOException ignored) {
@@ -184,7 +184,7 @@ public class Client {
                 for (Friend fr : account.friends){
                     if(fr.id == Integer.parseInt(command[2])){
 //                        Frames.MainFrame.panFriendList.get(fr.id).isOnline.setSelected(true);
-//                        Frames.MainFrame.panFriendList.get(fr.id).isOnline.setToolTipText("Оффлайн");
+//                        Frames.MainFrame.panFriendList.get(fr.id).isOnline.setToolTipText("Онлайн");
                         break;
                     }
                 }

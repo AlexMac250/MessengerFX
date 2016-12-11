@@ -9,69 +9,74 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="200.0" style="-fx-background-color: #474B4E;" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.universum.Client.controllers.MainMenuController">
-   <children>
-      <Button onMouseClicked="#actionListenerBtnLogin" layoutX="46.0" layoutY="48.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="109.0" style="-fx-background-color: #708090;" text="Войти" textFill="WHITE">
-         <font>
-            <Font name="David" size="20.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <effect>
-            <DropShadow color="#2f5d90" height="30.0" radius="14.5" width="30.0" />
-         </effect>
-      </Button>
-      <Button layoutX="46.0" layoutY="97.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="109.0" style="-fx-background-color: #979CA4;" text="Регистрация" textFill="#dae2ff">
-         <font>
-            <Font name="David Bold" size="14.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <effect>
-            <DropShadow color="#2f5d90" height="29.79" radius="14.395" width="29.79" />
-         </effect>
-      </Button>
-      <Button layoutX="46.0" layoutY="147.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="109.0" style="-fx-background-color: #979CA4;" text="Настройки" textFill="#d5dcf5">
-         <font>
-            <Font name="David Bold" size="14.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <effect>
-            <DropShadow color="#2f5d90" height="29.79" radius="14.395" width="29.79" />
-         </effect>
-      </Button>
-      <Button layoutX="46.0" layoutY="196.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="109.0" style="-fx-background-color: #979CA4;" text="О программе" textFill="#1a85ff">
-         <font>
-            <Font name="David" size="14.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <effect>
-            <DropShadow color="#2f5d90" height="29.79" radius="14.395" width="29.79" />
-         </effect>
-      </Button>
-      <Label layoutX="63.0" layoutY="14.0" text="Меню" textFill="#4597f9">
-         <font>
-            <Font name="Corbel Bold" size="28.0" />
-         </font>
-         <effect>
-            <Bloom threshold="0.15">
-               <input>
-                  <MotionBlur radius="1.5" />
-               </input>
-            </Bloom>
-         </effect>
-      </Label>
-   </children>
+<Pane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="250.0" prefWidth="200.0" style="-fx-background-color: #474B4E;"
+      xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ru.universum.Client.controllers.MainMenuController">
    <cursor>
-      <Cursor fx:constant="DEFAULT" />
+      <Cursor fx:constant="DEFAULT"/>
    </cursor>
    <effect>
-      <Bloom threshold="0.93" />
+      <Bloom threshold="0.93"/>
    </effect>
+   <Button onMouseClicked="#actionListenerBtnLogin" layoutX="46.0" layoutY="48.0" mnemonicParsing="false"
+           prefHeight="40.0" prefWidth="109.0" style="-fx-background-color: #708090;" text="Войти" textFill="WHITE">
+      <font>
+         <Font name="David" size="20.0"/>
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND"/>
+      </cursor>
+      <effect>
+         <DropShadow color="#2f5d90" height="30.0" radius="14.5" width="30.0"/>
+      </effect>
+   </Button>
+   <Button onMouseClicked="#actionListenerBtnRegister" layoutX="46.0" layoutY="97.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="109.0"
+           style="-fx-background-color: #979CA4;" text="Регистрация" textFill="#dae2ff">
+      <font>
+         <Font name="David Bold" size="14.0"/>
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND"/>
+      </cursor>
+      <effect>
+         <DropShadow color="#2f5d90" height="29.79" radius="14.395" width="29.79"/>
+      </effect>
+   </Button>
+   <Button layoutX="46.0" layoutY="147.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="109.0"
+           style="-fx-background-color: #979CA4;" text="Настройки" textFill="#d5dcf5">
+      <font>
+         <Font name="David Bold" size="14.0"/>
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND"/>
+      </cursor>
+      <effect>
+         <DropShadow color="#2f5d90" height="29.79" radius="14.395" width="29.79"/>
+      </effect>
+   </Button>
+   <Button layoutX="46.0" layoutY="196.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="109.0"
+           style="-fx-background-color: #979CA4;" text="О программе" textFill="#1a85ff">
+      <font>
+         <Font name="David" size="14.0"/>
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND"/>
+      </cursor>
+      <effect>
+         <DropShadow color="#2f5d90" height="29.79" radius="14.395" width="29.79"/>
+      </effect>
+   </Button>
+   <Label layoutX="63.0" layoutY="14.0" text="Меню" textFill="#4597f9">
+      <font>
+         <Font name="Corbel Bold" size="28.0"/>
+      </font>
+      <effect>
+         <Bloom threshold="0.15">
+            <input>
+               <MotionBlur radius="1.5"/>
+            </input>
+         </Bloom>
+      </effect>
+   </Label>
 </Pane>
