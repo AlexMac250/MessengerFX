@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="209.0" prefWidth="248.0" style="-fx-background-color: #474b4b;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.universum.Client.controllers.LoginController">
+   <children>
+      <TextField onAction="#login" onKeyTyped="#setDefColorTextField" onMouseClicked="#setDefColorTextField" fx:id="loginField" layoutX="16.0" layoutY="46.0" promptText="Логин" style="-fx-background-color: #595959;">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="#2f5d90" height="30.0" radius="14.5" width="30.0" />
+         </effect>
+      </TextField>
+      <PasswordField onAction="#login" onKeyTyped="#setDefColorTextField" onMouseClicked="#setDefColorTextField" fx:id="passwordField" layoutX="16.0" layoutY="88.0" promptText="Пароль" style="-fx-background-color: #595959;">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="#2f5d90" height="30.0" radius="14.5" width="30.0" />
+         </effect>
+      </PasswordField>
+      <Button onMouseClicked="#login" layoutX="134.0" layoutY="161.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="106.0" style="-fx-background-color: #979ca4;" text="Войти" textFill="#dae2ff">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="#2f5d90" height="30.0" radius="14.5" width="30.0" />
+         </effect>
+      </Button>
+      <CheckBox fx:id="remAccData" layoutX="16.0" layoutY="168.0" mnemonicParsing="false" text="Запомнить" textFill="#dae2ff">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <effect>
+            <DropShadow color="#2f5d90" height="30.0" radius="14.5" width="30.0" />
+         </effect>
+      </CheckBox>
+      <Label layoutX="46.0" layoutY="12.0" text="Аутентификация" textFill="#4597f9">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font>
+         <effect>
+            <Bloom>
+               <input>
+                  <MotionBlur radius="1.5">
+                     <input>
+                        <DropShadow color="#2f5d90" height="30.0" radius="14.5" width="30.0" />
+                     </input>
+                  </MotionBlur>
+               </input>
+            </Bloom>
+         </effect>
+      </Label>
+      <BorderPane layoutX="12.0" layoutY="136.0" prefHeight="19.0" prefWidth="224.0">
+         <center>
+            <Label fx:id="labelInfo" text="Введите данные и нажмите Войти" textFill="#4597f9" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="David Bold" size="14.0" />
+               </font>
+               <effect>
+                  <MotionBlur radius="1.5">
+                     <input>
+                        <Bloom />
+                     </input>
+                  </MotionBlur>
+               </effect>
+            </Label>
+         </center>
+      </BorderPane>
+   </children>
+   <effect>
+      <Bloom threshold="0.85" />
+   </effect>
+</Pane>
