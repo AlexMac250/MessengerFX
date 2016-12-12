@@ -2,6 +2,8 @@ package ru.universum.Client.controllers;
 
 import javafx.scene.input.MouseEvent;
 
+import java.io.IOException;
+
 public class MainMenuController {
 
     public void actionListenerBtnLogin(MouseEvent event){
@@ -16,7 +18,7 @@ public class MainMenuController {
 
     }
 
-    public void actionListenerBtnAbout(MouseEvent event){
-
+    public void actionListenerBtnAbout(MouseEvent event) throws IOException {
+        Controller.showAbout(event);
     }
 }

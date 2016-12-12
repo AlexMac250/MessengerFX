@@ -70,7 +70,6 @@ public class Client {
             reader.start();
         } catch (Exception e) {
             javafx.scene.control.Label label = LoginController.getLabelInfo();
-            label.setText("Нет соединения! :(");
             e.printStackTrace();
         }
     }

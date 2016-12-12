@@ -1,6 +1,5 @@
 package ru.universum.Client.controllers;
 
-import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -47,6 +46,6 @@ public class LoginController {
     public void setDefColorTextField(){
         ((DropShadow) loginField.getEffect()).setColor(Color.web("#2F5D90"));
         ((DropShadow) passwordField.getEffect()).setColor(Color.web("#2F5D90"));
-        loginField.setText("Введите данные и нажмите Войти");
+        labelInfo.setText("Введите данные и нажмите Войти");
     }
 }

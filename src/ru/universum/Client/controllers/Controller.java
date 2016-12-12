@@ -7,17 +7,27 @@ import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import ru.universum.Client.Main;
 
+import javax.annotation.Resource;
 import java.io.IOException;
 
 /**
  * Created by Александр on 11.12.2016.
  */
 public class Controller {
+    static Stage stgMain;
     static Stage stgLogin;
     static Stage stgRegister;
     static Stage stgSettings;
     static Stage stgAbout;
+
+    public static void showMain(MouseEvent event){
+        Stage stage = new Stage();
+    }
+    public static void hideMain(){
+        stgMain.hide();
+    }
 
     public static void showLogin(MouseEvent event){
         Stage stage = new Stage();
@@ -66,7 +76,7 @@ public class Controller {
         stgSettings.hide();
     }
 
-    public static void showAbout(MouseEvent event){
+    public static void showAbout(MouseEvent event) {
         Stage stage = new Stage();
         Parent root = null;
         try {
