@@ -15,7 +15,7 @@ public class MainMenuController {
     }
 
     public void actionListenerBtnSettings(MouseEvent event){
-
+        Controller.showInfo(event, "Насройки в данный момент не доступны. Приносим свои извенения.");
     }
 
     public void actionListenerBtnAbout(MouseEvent event) throws IOException {

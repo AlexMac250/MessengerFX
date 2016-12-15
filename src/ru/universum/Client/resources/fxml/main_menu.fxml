@@ -43,7 +43,7 @@
          <DropShadow color="#2f5d90" height="29.79" radius="14.395" width="29.79"/>
       </effect>
    </Button>
-   <Button layoutX="46.0" layoutY="147.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="109.0"
+   <Button onMouseClicked="#actionListenerBtnSettings" layoutX="46.0" layoutY="147.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="109.0"
            style="-fx-background-color: #979CA4;" text="Настройки" textFill="#d5dcf5">
       <font>
          <Font name="David Bold" size="14.0"/>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:controller="ru.universum.Client.controllers.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="109.0" prefWidth="517.0" style="-fx-background-color: #474B4B;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="430.0" layoutY="67.0" mnemonicParsing="false" style="-fx-background-color: #979CA4;" text="Закрыть" textFill="#dae2ff">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="#messageLab" alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="58.0" prefWidth="499.0" text="\$TEXT" textAlignment="CENTER" textFill="#dae2ff" wrapText="true">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

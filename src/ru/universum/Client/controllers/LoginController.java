@@ -20,27 +20,31 @@ public class LoginController {
     }
 
     public void login(){
-        if (loginField.getText().length() > 1 & passwordField.getText().length() > 1) {
-                    labelInfo.setText("Входим...");
-                    if (!Client.statusConnected) Client.connect();
-                    Client.login(loginField.getText(), Security.getSHA(passwordField.getText()));
-        } else {
-
-
-
-            if (loginField.getText().length() < 1 & passwordField.getText().length() > 0){ //login
-                ((DropShadow) loginField.getEffect()).setColor(Color.web("#990000"));
-                labelInfo.setText("Введите логин!");
-            } else if (loginField.getText().length() > 0 & passwordField.getText().length() < 1){ //password
-                ((DropShadow) passwordField.getEffect()).setColor(Color.web("#990000"));
-                labelInfo.setText("Введите пароль!");
-            } else if (loginField.getText().length() < 1 & passwordField.getText().length() < 1){ //login & password
-                ((DropShadow) loginField.getEffect()).setColor(Color.web("#990000"));
-                ((DropShadow) passwordField.getEffect()).setColor(Color.web("#990000"));
-                labelInfo.setText("Введите данные!");
-
-            }
-        }
+        Controller.hideMainMenu();
+        Controller.hideLogin();
+        Controller.showMain();
+        MainController.loadFriends();
+        //        if (loginField.getText().length() > 1 & passwordField.getText().length() > 1) {
+//                    labelInfo.setText("Входим...");
+//                    if (!Client.statusConnected) Client.connect();
+//                    Client.login(loginField.getText(), Security.getSHA(passwordField.getText()));
+//        } else {
+//
+//
+//
+//            if (loginField.getText().length() < 1 & passwordField.getText().length() > 0){ //login
+//                ((DropShadow) loginField.getEffect()).setColor(Color.web("#990000"));
+//                labelInfo.setText("Введите логин!");
+//            } else if (loginField.getText().length() > 0 & passwordField.getText().length() < 1){ //password
+//                ((DropShadow) passwordField.getEffect()).setColor(Color.web("#990000"));
+//                labelInfo.setText("Введите пароль!");
+//            } else if (loginField.getText().length() < 1 & passwordField.getText().length() < 1){ //login & password
+//                ((DropShadow) loginField.getEffect()).setColor(Color.web("#990000"));
+//                ((DropShadow) passwordField.getEffect()).setColor(Color.web("#990000"));
+//                labelInfo.setText("Введите данные!");
+//
+//            }
+//        }
     }
 
     public void setDefColorTextField(){

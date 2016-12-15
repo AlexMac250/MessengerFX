@@ -24,7 +24,7 @@ public class Client {
     static final String os_version = System.getProperty("os.version");
 //    static final String working_directory = Util.getWorkingDirectory().getAbsolutePath();
 
-    static final String client_version = "version 1.0 alpha 1";
+    public static final String client_version = "version 2.0 alpha 1";
     private static List<ClientMessage> messages = new ArrayList<>();
     static Socket socket;
     static int port;
@@ -35,7 +35,7 @@ public class Client {
     private static final boolean DATED = true;
     static String HOSTNAME = "95.154.89.186";
 
-    static Account account = new Account();
+    public static Account account = new Account();
 
     private static boolean statusLogged = false;
     public static boolean statusConnected = false;
@@ -141,7 +141,7 @@ public class Client {
             case "account" :
                 account.login = command[2];
                 account.id = Integer.parseInt(command[3]);
-//                Frames.MainFrame.showFrame();
+                Controller.showMain();
                 // отображаешь майн фрейм
                 break;
 
@@ -149,6 +149,7 @@ public class Client {
                 if(command[2].equals("true")){
                     statusLogged = true;
                     Controller.hideLogin();
+                    Controller.hideMainMenu();
                     //залогинился
                 }else{
                     LoginController.getLabelInfo().setText("Не верные логин или пароль!");
